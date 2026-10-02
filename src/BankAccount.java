@@ -10,8 +10,12 @@ public class BankAccount {
 		
 	}
 	
-	public void quickWithdraw() throws NegativeBalanceExecption {
+	public void quickWithdraw(double amount) throws NegativeBalanceExecption {
+		if (amount > this.balance) {
+			throw new NegativeBalanceExecption();
+		}
 		
+		this.balance -= amount;
 	}
 
 }
