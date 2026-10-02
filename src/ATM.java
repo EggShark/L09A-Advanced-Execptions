@@ -8,11 +8,18 @@ public class ATM {
 	}
 	
 	public void handleTransactions() {
-		
+		try {
+			this.account.withdraw(600.0);
+		} 
+		catch (NegativeBalanceExecption e) {
+			System.out.println(e);
+			System.out.println(e.getMessage());
+		}
 	}
 	
 	public static void main(String[] args) {
-		
+			ATM atm = new ATM();
+			atm.handleTransactions();
 	}
 
 }
