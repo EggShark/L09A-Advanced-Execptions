@@ -15,6 +15,10 @@ public class ATM {
 			System.out.println(e);
 			System.out.println(e.getMessage());
 		}
+		
+		// second try-catch
+		// calls quickWithdraw() with 600
+		// contain same printouts on error
 	}
 	
 	public static void main(String[] args) {

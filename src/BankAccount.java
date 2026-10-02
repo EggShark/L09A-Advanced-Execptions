@@ -7,7 +7,10 @@ public class BankAccount {
 	}
 	
 	public void withdraw(double amount) throws NegativeBalanceExecption {
-		
+		// takes parameter to withdraw amount
+		// if amount is greater than balance, throws exception 
+			//(pass negative value to exception, but make it positive) 
+		// otherwise, update balance
 	}
 	
 	public void quickWithdraw(double amount) throws NegativeBalanceExecption {
