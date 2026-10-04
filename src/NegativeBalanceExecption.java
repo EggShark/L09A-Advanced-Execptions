@@ -5,11 +5,15 @@ import java.io.IOException;  // Import the IOException class
 public class NegativeBalanceExecption extends Exception {
 	private double negativeBalance;
 	
+	// Constructor if not given a balance amount - used by quickWithdraw()
 	public NegativeBalanceExecption() {
+		// Print simple error
 		super("Error: negative balance");
 	}
 	
+	// Constructor to accept the amount that balance is exceeded by - used by withdraw()
 	public NegativeBalanceExecption(double bal) {
+		// Create detailed output for the user
 		super("Amount exceeds balance by " + bal);
 
 		try {

@@ -1,4 +1,3 @@
-
 public class BankAccount {
 	private double balance;
 	
@@ -7,10 +6,13 @@ public class BankAccount {
 	}
 	
 	public void withdraw(double amount) throws NegativeBalanceExecption {
-		// takes parameter to withdraw amount
 		// if amount is greater than balance, throws exception 
-			//(pass negative value to exception, but make it positive) 
+		if (amount > this.balance) {
+			// pass negative value into 
+			throw new NegativeBalanceExecption(Math.abs(this.balance - amount));
+		}
 		// otherwise, update balance
+		this.balance -= amount;
 	}
 	
 	public void quickWithdraw(double amount) throws NegativeBalanceExecption {
