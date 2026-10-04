@@ -2,17 +2,17 @@ import java.io.PrintWriter;   // Import the FileWriter class
 import java.io.File;
 import java.io.IOException;  // Import the IOException class
 
-public class NegativeBalanceExecption extends Exception {
+public class NegativeBalanceException extends Exception {
 	private double negativeBalance;
 	
 	// Constructor if not given a balance amount - used by quickWithdraw()
-	public NegativeBalanceExecption() {
+	public NegativeBalanceException() {
 		// Print simple error
 		super("Error: negative balance");
 	}
 	
 	// Constructor to accept the amount that balance is exceeded by - used by withdraw()
-	public NegativeBalanceExecption(double bal) {
+	public NegativeBalanceException(double bal) {
 		// Create detailed output for the user
 		super("Amount exceeds balance by " + bal);
 

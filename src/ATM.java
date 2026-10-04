@@ -12,7 +12,7 @@ public class ATM {
 		try {
 			this.account.withdraw(600.0);
 		} 
-		catch (NegativeBalanceExecption e) {
+		catch (NegativeBalanceException e) {
 			System.out.println(e);
 			System.out.println(e.getMessage());
 		}
@@ -21,7 +21,7 @@ public class ATM {
 		try {
 			this.account.quickWithdraw(600.0);
 		} 
-		catch (NegativeBalanceExecption e) {
+		catch (NegativeBalanceException e) {
 			System.out.println(e);
 			System.out.println(e.getMessage());
 		}
