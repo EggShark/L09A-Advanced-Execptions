@@ -1,5 +1,6 @@
 What are 3 good practices related to exception handling:
 
-- 
-- 
-- 
+- Pass as much relevant information as possible into exceptions
+- Exceptions should provide a clear, full message to give feedback on the error itself
+- Ensure that the exception is either handled or thrown by catch blocks, otherwise information on the exception 
+is lost, such as the cause and reason for the error.
